@@ -63,12 +63,12 @@ export default function Header() {
       <nav className="main-container">
         <div className="flex items-center justify-between h-16">
           <motion.a
-            href="#"
-            className="text-2xl font-bold gradient-text rounded-full border-2 border-primary px-3 py-1"
+            href="#hero"
+            className="text-base font-bold gradient-text px-3 py-1"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            IC
+            Ishanka Charuka
           </motion.a>
 
           {/* Desktop Navigation */}

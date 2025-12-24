@@ -21,7 +21,8 @@ const projects = [
       "The official digital presence for my travel business. A responsive, multi-page site featuring package listings, service details, and interactive contact forms.",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/iacharuka",
-    live: null,
+    live: "https://yan-travel.netlify.app", // Replace with actual live URL if available
+      image: "/yan-travel-website.png", // Path to the project image
     color: "from-green-500 to-emerald-500",
   },
   {
@@ -88,6 +89,16 @@ export default function Projects() {
               className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-background to-accent/50 border border-border hover:border-primary/50 transition-all duration-500 backdrop-blur-sm"
               whileHover={{ y: -12, scale: 1.01 }}
             >
+              {project.image && (
+                <div className="relative h-60 w-full overflow-hidden rounded-t-3xl">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+                </div>
+              )}
               <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${project.color} opacity-5 blur-3xl group-hover:opacity-15 transition-opacity duration-500`} />
               
               <div className="relative p-8 md:p-10">
